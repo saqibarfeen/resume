@@ -1,0 +1,128 @@
+% M. Saqib Arfeen — CV
+% Compile with pdflatex. Works out of the box on Overleaf (overleaf.com):
+% New Project -> Upload -> this file -> Recompile.
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=1.4cm,top=1.2cm,bottom=1.1cm]{geometry}
+\usepackage{mathptmx}          % Times font, like the PDF version
+\usepackage[none]{hyphenat}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+
+\definecolor{rulegrey}{HTML}{BBBBBB}
+\definecolor{datedim}{HTML}{555555}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% ---------- layout commands ----------
+\newlength{\labelw}\setlength{\labelw}{3.4cm}
+\newlength{\bodyw}\setlength{\bodyw}{\dimexpr\textwidth-\labelw-0.3cm\relax}
+
+% \cvsection{Label}{content}
+\newcommand{\cvsection}[2]{%
+  {\color{rulegrey}\hrule height 0.5pt}\vspace{4pt}%
+  \begin{minipage}[t]{\labelw}\textbf{#1}\end{minipage}%
+  \hfill
+  \begin{minipage}[t]{\bodyw}#2\end{minipage}%
+  \vspace{8pt}\par
+}
+
+% \job{Title}{Company — City}{Dates}
+\newcommand{\job}[3]{%
+  \textbf{#1}, #2 \hfill {\itshape\color{datedim}#3}\par\vspace{1pt}%
+}
+
+\newenvironment{jobitems}
+  {\begin{itemize}[leftmargin=12pt,itemsep=1pt,parsep=0pt,topsep=1pt,label=\textbullet]}
+  {\end{itemize}\vspace{5pt}}
+
+% =====================================================================
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries M. Saqib Arfeen}\\[3pt]
+  {\small\color{datedim}
+    Berlin, Germany \,|\, \href{mailto:saqib.arfeen@gmail.com}{saqib.arfeen@gmail.com} \,|\, +49\,XXX\,XXXXXXX\\
+    \href{https://github.com/saqibarfeen}{github.com/saqibarfeen} \,|\,
+    \href{https://www.linkedin.com/in/mohamedsaqib}{linkedin.com/in/mohamedsaqib}}
+\end{center}
+\vspace{6pt}
+
+\cvsection{Summary}{%
+Senior Software Engineer with 10 years of experience building backend systems,
+distributed platforms, and cloud infrastructure --- including 3+ years shipping
+product at a Berlin SaaS company. Strengths in high-availability system design,
+performance troubleshooting, and taking products from architecture to
+production. Work authorization: [EU Blue Card / Permanent Residence --- no
+sponsorship required].}
+
+\cvsection{Experience}{%
+\job{Senior Software Engineer}{Ninox Software GmbH --- Berlin}{Nov 2022 -- Feb 2026}
+\begin{jobitems}
+  \item Designed and shipped core features of the Ninox low-code database
+        platform (Node.js/TypeScript, React, Postgres), contributing to a
+        sustained $\sim$20\% annual ARR growth.
+  \item Scaled the platform and led performance investigations across the
+        stack --- profiling, query optimization, and caching --- for a growing
+        multi-tenant customer base.
+  \item Worked directly with customer-facing teams to turn escalations into
+        durable fixes and product improvements.
+\end{jobitems}
+\job{Senior Software Engineer}{Seed Labs --- Karachi}{Oct 2021 -- Sep 2022}
+\begin{jobitems}
+  \item Designed and implemented high availability for the in-memory order
+        book of a low-latency decentralized exchange.
+  \item Built backend components including the order-matching engine and
+        blockchain settlement engine.
+  \item Led migration to Kubernetes, significantly reducing fixed
+        infrastructure costs while improving scalability.
+\end{jobitems}
+\job{Senior Software Engineer}{Folio3 Software --- Karachi}{Nov 2019 -- Sep 2021}
+\begin{jobitems}
+  \item Led development of ERP customizations and e-commerce integrations
+        (NetSuite SuiteCloud, SuiteScript, React) for Fortune 500 clients.
+  \item Created an internal knowledge base of ERP design patterns that
+        measurably cut delivery time for routine projects.
+\end{jobitems}
+\job{Senior Software Engineer}{Ivolve Technologies --- Karachi}{Jul 2019 -- Nov 2019}
+\begin{jobitems}
+  \item Built hybrid-cloud middleware integrating OpenStack with public
+        clouds; developed monitoring pipelines (Elasticsearch, Graphite,
+        Grafana).
+\end{jobitems}
+\job{Software Engineer}{Cloud9 Networks FZE --- Dubai}{Jul 2016 -- Jun 2019}
+\begin{jobitems}
+  \item Architected and deployed a big-data analytics product (Hadoop, Hive,
+        Java Spring) powering a customer-loyalty payment system in the MENA
+        region.
+  \item Built network/cloud monitoring systems covering thousands of customer
+        premises devices, with alerting and ticketing integrations; helped win
+        a contract with a top-tier Pakistani telecom.
+  \item Trained and onboarded new developers into productive engineers.
+\end{jobitems}}
+
+\cvsection{Skills}{%
+\textbf{Languages:} TypeScript/JavaScript, Java, Python, Go, C++\\
+\textbf{Backend:} Node.js, NestJS, Spring, Flask; REST APIs, event-driven
+systems (Kafka, RabbitMQ, Redis)\\
+\textbf{Data:} Postgres, MySQL, MongoDB, Elasticsearch, InfluxDB, Hadoop/Hive,
+Spark\\
+\textbf{Cloud \& DevOps:} Kubernetes, AWS, OpenStack, Docker, GitHub Actions,
+CircleCI, Prometheus, Grafana}
+
+\cvsection{Education}{%
+\job{BS Computer Science}{National University of Computer and Emerging
+Sciences (FAST-NUCES)}{2012 -- 2016}
+\begin{jobitems}
+  \item Research Assistant (Machine Learning): deep learning on
+        constraint-solver-generated puzzle data --- published in IJACSA 2017.
+        Systems Engineer, Nvidia HPC Lab: built MPI and Hadoop clusters.
+\end{jobitems}}
+
+\cvsection{Languages}{English (fluent), Urdu (native), German ([your level,
+e.g.\ A2/B1])}
+
+\end{document}
