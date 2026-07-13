@@ -4,7 +4,8 @@
 \documentclass[10pt,a4paper]{article}
 
 \usepackage[margin=1.4cm,top=1.2cm,bottom=1.1cm]{geometry}
-\usepackage{mathptmx}          % Times font, like the PDF version
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
 \usepackage[none]{hyphenat}
 \usepackage{enumitem}
 \usepackage{xcolor}
@@ -22,20 +23,18 @@
 \newlength{\bodyw}\setlength{\bodyw}{\dimexpr\textwidth-\labelw-0.3cm\relax}
 
 % \cvsection{Label}{content}
+% small-caps section labels like "PROFESSIONAL EXPERIENCE":
 \newcommand{\cvsection}[2]{%
   {\color{rulegrey}\hrule height 0.5pt}\vspace{4pt}%
-  \begin{minipage}[t]{\labelw}\textbf{#1}\end{minipage}%
+  \begin{minipage}[t]{\labelw}\textsc{#1}\end{minipage}%   % \textbf -> \textsc
   \hfill
   \begin{minipage}[t]{\bodyw}#2\end{minipage}%
   \vspace{8pt}\par
 }
 
-% \job{Title}{Company — City}{Dates}
-% \newcommand{\job}[3]{%
-%   \textbf{#1}, #2 \hfill {\itshape\color{datedim}#3}\par\vspace{1pt}%
-% }
+% bold + underlined company names like his:
 \newcommand{\job}[3]{%
-  \textbf{#1}, #2 \hfill #3\par\vspace{1pt}%
+  \underline{\textbf{#1}}, #2 \hfill #3\par\vspace{1pt}%
 }
 
 \newenvironment{jobitems}
