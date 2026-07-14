@@ -3,7 +3,8 @@
 % New Project -> Upload -> this file -> Recompile.
 \documentclass[10pt,a4paper]{article}
 
-\usepackage[margin=1.4cm,top=1.2cm,bottom=1.1cm]{geometry}
+\usepackage[a4paper,left=2.1cm,right=2.1cm,top=1.8cm,bottom=1.8cm]{geometry}
+
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage[none]{hyphenat}
@@ -26,7 +27,7 @@
 % small-caps section labels like "PROFESSIONAL EXPERIENCE":
 \newcommand{\cvsection}[2]{%
   {\color{rulegrey}\hrule height 0.5pt}\vspace{4pt}%
-  \begin{minipage}[t]{\labelw}\textsc{#1}\end{minipage}%   % \textbf -> \textsc
+  \begin{minipage}[t]{\labelw}\raggedright\textsc{#1}\end{minipage}%
   \hfill
   \begin{minipage}[t]{\bodyw}#2\end{minipage}%
   \vspace{8pt}\par
