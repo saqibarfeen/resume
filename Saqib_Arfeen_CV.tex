@@ -23,8 +23,6 @@
 \newlength{\labelw}\setlength{\labelw}{2.4cm}
 \newlength{\bodyw}\setlength{\bodyw}{\dimexpr\textwidth-\labelw-0.3cm\relax}
 
-% \cvsection{Label}{content}
-% small-caps section labels like "PROFESSIONAL EXPERIENCE":
 \newcommand{\cvsection}[2]{%
   % \color{rulegrey}\hrule height 0.5pt}\vspace{4pt}%
   \vspace{4pt}%
@@ -35,8 +33,13 @@
 }
 
 % bold + underlined company names like his:
+% \newcommand{\job}[3]{%
+%   \underline{\textbf{#1}} \hfill #3\par\vspace{1pt} \\#2 %
+% }
+
 \newcommand{\job}[3]{%
-  \underline{\textbf{#1}} \hfill #3\par\vspace{1pt} \\#2 %
+  \underline{\textbf{#1}} \hfill #3\\
+  #2\par\vspace{1pt}%
 }
 
 \newenvironment{jobitems}
@@ -46,20 +49,14 @@
 % =====================================================================
 \begin{document}
 
-% \begin{}
-  {\LARGE\bfseries Muhammad Saqib Arfeen}\\[3pt]
-  % {\small\color{datedim}
-  %   \href{mailto:saqib.arfeen@gmail.com}{saqib.arfeen@gmail.com} \,|\,
-  %   \href{https://github.com/saqibarfeen}{github.com/saqibarfeen} \,|\,
-  %   \href{https://www.linkedin.com/in/mohamedsaqib}{linkedin.com/in/mohamedsaqib}}
-% \end{}
-% \vspace{6pt}
+{\bfseries M.\ Saqib Arfeen}\par
+\vspace{6pt}
+{\color{black}\hrule height 0.3pt}
 
-\hrule height 0.5pt
-\vspace{4pt}
+\vspace{6pt}
 
 \cvsection{Contact}{%
-\href{https://github.com/saqibarfeen}{https://github.com/saqibarfeen} \hfill \href{mailto:saqib.arfeen@gmail.com}{saqib.arfeen@gmail.com}
+\href{https://github.com/saqibarfeen}{https://github.com/saqibarfeen} \hfill \href{mailto:saqibarfeen@gmail.com}{saqibarfeen@gmail.com}
 }
 \cvsection{Summary}{%
 Senior Software Engineer with 10 years of experience building backend systems,
@@ -70,8 +67,7 @@ performance troubleshooting, and taking products from architecture to production
 \cvsection{Experience}{%
 \job{Ninox Software GmbH --- Berlin}{Senior Software Engineer}{Nov '22 -- Feb '26}
 \begin{jobitems}
-  \item Designed and shipped core features of the Ninox low-code platform contributing to a
-        sustained $\sim$20\% ARR growth
+  \item Designed and shipped core features of the low-code platform directly contributing to a sustained 20\% ARR growth
   \item Scaled the platform and led performance investigations across the
         stack --- profiling, query optimization, and caching --- for a growing
         multi-tenant customer base
@@ -106,8 +102,8 @@ performance troubleshooting, and taking products from architecture to production
         Java Spring) powering a customer-loyalty payment system in the MENA
         region
   \item Built network/cloud monitoring systems covering thousands of customer
-        premises devices, with alerting and ticketing integrations; helped win
-        a contract with a top-tier Pakistani telecom
+        premises devices, with alerting and ticketing integration; helped win
+        a contract with a telecom giant
 \end{jobitems}}
 
 \cvsection{Skills}{%
@@ -116,8 +112,7 @@ performance troubleshooting, and taking products from architecture to production
 systems (Kafka, RabbitMQ, Redis)\\
 \textbf{Data:} Postgres, MySQL, MongoDB, Elasticsearch, InfluxDB, Hadoop/Hive,
 Spark\\
-\textbf{Cloud \& DevOps:} Kubernetes, AWS, OpenStack, Docker, GitHub Actions,
-CircleCI, Prometheus, Grafana}
+\textbf{Cloud \& DevOps:} Kubernetes, AWS, OpenStack, Docker, Prometheus, Grafana}
 
 \cvsection{Education}{%
 \job{National University of Computer and Emerging
