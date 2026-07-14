@@ -34,7 +34,7 @@
 
 % bold + underlined company names like his:
 \newcommand{\job}[3]{%
-  \underline{\textbf{#1}}, #2 \hfill #3\par\vspace{1pt}%
+  \underline{\textbf{#1}} \hfill #3\par\vspace{1pt} \\#2 %
 }
 
 \newenvironment{jobitems}
@@ -60,7 +60,7 @@ product at a Berlin SaaS company. Strengths in high-availability system design,
 performance troubleshooting, and taking products from architecture to production.}
 
 \cvsection{Experience}{%
-\job{Senior Software Engineer}{Ninox Software GmbH --- Berlin}{Nov '22 -- Feb '26}
+\job{Ninox Software GmbH --- Berlin}{Senior Software Engineer}{Nov '22 -- Feb '26}
 \begin{jobitems}
   \item Designed and shipped core features of the Ninox low-code database
         platform (Node.js/TypeScript, React, Postgres), contributing to a
@@ -71,7 +71,7 @@ performance troubleshooting, and taking products from architecture to production
   \item Worked directly with customer-facing teams to turn escalations into
         durable fixes and product improvements.
 \end{jobitems}
-\job{Senior Software Engineer}{Seed Labs --- Karachi}{Oct '21 -- Sep '22}
+\job{Seed Labs --- Karachi}{Senior Software Engineer}{Oct '21 -- Sep '22}
 \begin{jobitems}
   \item Designed and implemented high availability for the in-memory order
         book of a low-latency decentralized exchange.
@@ -80,20 +80,20 @@ performance troubleshooting, and taking products from architecture to production
   \item Led migration to Kubernetes, significantly reducing fixed
         infrastructure costs while improving scalability.
 \end{jobitems}
-\job{Senior Software Engineer}{Folio3 Software --- Karachi}{Nov '19 -- Sep '21}
+\job{Folio3 Software --- Karachi}{Senior Software Engineer}{Nov '19 -- Sep '21}
 \begin{jobitems}
   \item Led development of ERP customizations and e-commerce integrations
         (NetSuite SuiteCloud, SuiteScript, React) for Fortune 500 clients.
   \item Created an internal knowledge base of ERP design patterns that
         measurably cut delivery time for routine projects.
 \end{jobitems}
-\job{Senior Software Engineer}{Ivolve Technologies --- Karachi}{Jul '19 -- Nov '19}
+\job{Ivolve Technologies --- Karachi}{Senior Software Engineer}{Jul '19 -- Nov '19}
 \begin{jobitems}
   \item Built hybrid-cloud middleware integrating OpenStack with public
         clouds; developed monitoring pipelines (Elasticsearch, Graphite,
         Grafana).
 \end{jobitems}
-\job{Software Engineer}{Cloud9 Networks FZE --- Dubai}{Jul '16 -- Jun '19}
+\job{Cloud9 Networks FZE --- Dubai}{Software Engineer}{Jul '16 -- Jun '19}
 \begin{jobitems}
   \item Architected and deployed a big-data analytics product (Hadoop, Hive,
         Java Spring) powering a customer-loyalty payment system in the MENA
@@ -114,12 +114,13 @@ Spark\\
 CircleCI, Prometheus, Grafana}
 
 \cvsection{Education}{%
-\job{BS Computer Science}{National University of Computer and Emerging
-Sciences} {}
+\job{National University of Computer and Emerging
+Sciences}{Bachelor of Science in Computer Science} {}
 \begin{jobitems}
   \item Research Assistant (Machine Learning): deep learning on
         constraint-solver-generated puzzle data --- published in IJACSA 2017.
-        Systems Engineer, Nvidia HPC Lab: built MPI and Hadoop clusters.
+
+ \item Systems Engineer, Nvidia HPC Lab: built MPI and Hadoop clusters.
 \end{jobitems}}
 
 \cvsection{Languages}{English (fluent), German (A2)}
