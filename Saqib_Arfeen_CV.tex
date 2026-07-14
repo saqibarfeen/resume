@@ -26,7 +26,8 @@
 % \cvsection{Label}{content}
 % small-caps section labels like "PROFESSIONAL EXPERIENCE":
 \newcommand{\cvsection}[2]{%
-  {\color{rulegrey}\hrule height 0.5pt}\vspace{4pt}%
+  % \color{rulegrey}\hrule height 0.5pt}\vspace{4pt}%
+  \vspace{4pt}%
   \begin{minipage}[t]{\labelw}\raggedright\textsc{#1}\end{minipage}%
   \hfill
   \begin{minipage}[t]{\bodyw}#2\end{minipage}%
@@ -45,15 +46,21 @@
 % =====================================================================
 \begin{document}
 
-\begin{center}
-  {\LARGE\bfseries M. Saqib Arfeen}\\[3pt]
-  {\small\color{datedim}
-    \href{mailto:saqib.arfeen@gmail.com}{saqib.arfeen@gmail.com} \,|\,
-    \href{https://github.com/saqibarfeen}{github.com/saqibarfeen} \,|\,
-    \href{https://www.linkedin.com/in/mohamedsaqib}{linkedin.com/in/mohamedsaqib}}
-\end{center}
-\vspace{6pt}
+% \begin{}
+  {\LARGE\bfseries Muhammad Saqib Arfeen}\\[3pt]
+  % {\small\color{datedim}
+  %   \href{mailto:saqib.arfeen@gmail.com}{saqib.arfeen@gmail.com} \,|\,
+  %   \href{https://github.com/saqibarfeen}{github.com/saqibarfeen} \,|\,
+  %   \href{https://www.linkedin.com/in/mohamedsaqib}{linkedin.com/in/mohamedsaqib}}
+% \end{}
+% \vspace{6pt}
 
+\hrule height 0.5pt
+\vspace{4pt}
+
+\cvsection{Contact}{%
+\href{https://github.com/saqibarfeen}{https://github.com/saqibarfeen} \hfill \href{mailto:saqib.arfeen@gmail.com}{saqib.arfeen@gmail.com}
+}
 \cvsection{Summary}{%
 Senior Software Engineer with 10 years of experience building backend systems,
 distributed platforms, and cloud infrastructure --- including 3+ years shipping
